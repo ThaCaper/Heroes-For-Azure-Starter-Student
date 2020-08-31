@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace Heroes_For_Azure_Starter_Student
+namespace Heroes_for_Azure_Starter_Student
 {
     public class Startup
     {

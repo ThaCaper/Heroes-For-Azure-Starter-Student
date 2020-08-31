@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Heroes_For_Azure_Starter_Student
+namespace Heroes_for_Azure_Starter_Student
 {
     public class Program
     {

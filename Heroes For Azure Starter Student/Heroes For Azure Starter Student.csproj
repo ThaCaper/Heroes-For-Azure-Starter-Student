@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>Heroes_For_Azure_Starter_Student</RootNamespace>
+    <RootNamespace>Heroes_for_Azure_Starter_Student</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

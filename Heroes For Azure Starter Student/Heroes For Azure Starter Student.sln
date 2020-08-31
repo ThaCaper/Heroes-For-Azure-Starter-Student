@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heroes For Azure Starter Student", "Heroes For Azure Starter Student\Heroes For Azure Starter Student.csproj", "{114D8580-AC17-4B8F-B0FF-39A570CBD807}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heroes for Azure Starter Student", "Heroes for Azure Starter Student.csproj", "{8064AED6-5BA1-416D-B454-7C2348BBFEE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{114D8580-AC17-4B8F-B0FF-39A570CBD807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{114D8580-AC17-4B8F-B0FF-39A570CBD807}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{114D8580-AC17-4B8F-B0FF-39A570CBD807}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{114D8580-AC17-4B8F-B0FF-39A570CBD807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8064AED6-5BA1-416D-B454-7C2348BBFEE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8064AED6-5BA1-416D-B454-7C2348BBFEE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8064AED6-5BA1-416D-B454-7C2348BBFEE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8064AED6-5BA1-416D-B454-7C2348BBFEE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A634A23B-49A1-4554-9A12-904A81A8CEC6}
+		SolutionGuid = {25A9FD27-993B-4D2C-8921-E14C747E6B05}
 	EndGlobalSection
 EndGlobal

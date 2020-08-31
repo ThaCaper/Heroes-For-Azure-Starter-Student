@@ -4,8 +4,8 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:59679",
-      "sslPort": 44347
+      "applicationUrl": "http://localhost:62305",
+      "sslPort": 44355
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Heroes_For_Azure_Starter_Student": {
+    "Heroes_for_Azure_Starter_Student": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

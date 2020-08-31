@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Heroes_For_Azure_Starter_Student.Controllers
+namespace Heroes_for_Azure_Starter_Student.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
