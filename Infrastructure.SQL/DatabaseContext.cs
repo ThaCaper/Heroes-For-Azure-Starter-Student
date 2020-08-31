@@ -1,6 +1,6 @@
 ﻿namespace Infrastructure.SQL
 {
-    public class DbContext
+    public class DatabaseContext : DbContext
     {
         
     }
