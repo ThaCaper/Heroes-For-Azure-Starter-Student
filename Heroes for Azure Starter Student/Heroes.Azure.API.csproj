@@ -7,8 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <ProjectReference Include="..\Heroes.Core\Heroes.Core.csproj" />
+    <ProjectReference Include="..\Heroes.Entity\Heroes.Entity.csproj" />
+    <ProjectReference Include="..\Infrastructure.SQL\Infrastructure.SQL.csproj" />
   </ItemGroup>
 
 </Project>
