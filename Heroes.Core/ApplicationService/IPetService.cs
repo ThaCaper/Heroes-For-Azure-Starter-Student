@@ -9,7 +9,7 @@ namespace Heroes.Core.ApplicationService
 
         Pet GetPetById(int id);
 
-        Pet DeleteCover(int id);
+        Pet DeletePet(int id);
 
         List<Pet> GetAllCovers();
 

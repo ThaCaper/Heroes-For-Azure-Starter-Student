@@ -1,33 +1,46 @@
 ﻿using Heroes.Entity;
 using System.Collections.Generic;
+using System.IO;
+using Heroes.Core.DomainService;
 
 namespace Heroes.Core.ApplicationService.impl
 {
     public class PetService : IPetService
     {
+
+        private readonly IPetRepository _petRepository;
+
+        public PetService(IPetRepository petRepo)
+        {
+            _petRepository = petRepo;
+        }
         public Pet CreateCover(Pet createdPet)
         {
-            throw new System.NotImplementedException();
+            return _petRepository.CreateCover(createdPet);
         }
 
-        public Pet DeleteCover(int id)
+        public Pet DeletePet(int id)
         {
-            throw new System.NotImplementedException();
+            if (_petRepository.DeletePet(id) == null)
+                throw new InvalidDataException("No pet with id: " + id + " exist");
+            return _petRepository.DeletePet(id);
         }
 
         public List<Pet> GetAllCovers()
         {
-            throw new System.NotImplementedException();
+            return _petRepository.GetAllPet();
         }
 
         public Pet GetPetById(int id)
         {
-            throw new System.NotImplementedException();
+            if (_petRepository.GetPetById(id) == null)
+                throw new InvalidDataException("Can't find pet with the id: " + id);
+            return _petRepository.GetPetById(id);
         }
 
         public Pet UpdatePet(Pet updatedPet)
         {
-            throw new System.NotImplementedException();
+            return _petRepository.UpdatePet(updatedPet);
         }
     }
 }
