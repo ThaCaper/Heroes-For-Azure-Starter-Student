@@ -46,7 +46,7 @@ namespace Heroes.Azure.API
                 services.AddDbContext<DatabaseContext>(
                     opt => opt.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
 
-            //services.AddScoped<IPetRepository, PetRepository>();
+            services.AddScoped<IPetRepository, PetRepository>();
             services.AddScoped<IPetService, PetService>();
 
             services.AddScoped<IHeroRepository, HeroRepository>();
@@ -58,15 +58,29 @@ namespace Heroes.Azure.API
         {
             if (env.IsDevelopment())
             {
+                using (var scope = app.ApplicationServices.CreateScope())
+                {
+                    var service = scope.ServiceProvider;
+                    var ctx = service.GetService<DatabaseContext>();
+                    ctx.Database.EnsureCreated();
+                }
                 app.UseDeveloperExceptionPage();
             }
             else
             {
+                using (var scope = app.ApplicationServices.CreateScope())
+                {
+                    var service = scope.ServiceProvider;
+                    var ctx = service.GetService<DatabaseContext>();
+                    ctx.Database.EnsureCreated();
+                }
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
+            app.UseCors("AllowSpecificOrigin");
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

@@ -5,7 +5,7 @@ namespace Heroes.Core.DomainService
 {
     public interface IPetRepository
     {
-        Pet CreateCover(Pet createdCover);
+        Pet CreatePet(Pet createdPet);
 
         List<Pet> GetAllPet();
 

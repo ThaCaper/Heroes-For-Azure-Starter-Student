@@ -16,7 +16,7 @@ namespace Heroes.Core.ApplicationService.impl
         }
         public Pet CreatePet(Pet createdPet)
         {
-            return _petRepository.CreateCover(createdPet);
+            return _petRepository.CreatePet(createdPet);
         }
 
         public Pet DeletePet(int id)

@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Heroes.Core.DomainService;
 using Heroes.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.SQL.Repositories
 {
-    public class PetRepository
+    public class PetRepository : IPetRepository
     {
 
         private readonly DatabaseContext _context;
