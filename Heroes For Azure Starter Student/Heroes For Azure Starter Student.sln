@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heroes for Azure Starter Student", "Heroes for Azure Starter Student.csproj", "{8064AED6-5BA1-416D-B454-7C2348BBFEE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heroes for Azure Starter Student", "Heroes for Azure Starter Student.csproj", "{8064AED6-5BA1-416D-B454-7C2348BBFEE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{CEDB3D86-086A-4B01-BE48-6B16D9B1EE80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{14AB28B8-ECE8-4BE6-8872-6838894F9EF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{FF71569C-17EC-4C98-A09D-323630E51A64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heroes.Core", "..\Heroes.Core\Heroes.Core.csproj", "{E718BBE9-5F55-4A1E-9CA5-A3297EE6EED0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heroes.Entity", "..\Heroes.Entity\Heroes.Entity.csproj", "{F88A0675-43C5-441C-A225-D0F6438C8CA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.SQL", "..\Infrastructure.SQL\Infrastructure.SQL.csproj", "{08D9594C-839F-461C-83B5-FE2022FBA0DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +27,27 @@ Global
 		{8064AED6-5BA1-416D-B454-7C2348BBFEE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8064AED6-5BA1-416D-B454-7C2348BBFEE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8064AED6-5BA1-416D-B454-7C2348BBFEE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E718BBE9-5F55-4A1E-9CA5-A3297EE6EED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E718BBE9-5F55-4A1E-9CA5-A3297EE6EED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E718BBE9-5F55-4A1E-9CA5-A3297EE6EED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E718BBE9-5F55-4A1E-9CA5-A3297EE6EED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F88A0675-43C5-441C-A225-D0F6438C8CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F88A0675-43C5-441C-A225-D0F6438C8CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F88A0675-43C5-441C-A225-D0F6438C8CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F88A0675-43C5-441C-A225-D0F6438C8CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08D9594C-839F-461C-83B5-FE2022FBA0DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08D9594C-839F-461C-83B5-FE2022FBA0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08D9594C-839F-461C-83B5-FE2022FBA0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08D9594C-839F-461C-83B5-FE2022FBA0DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8064AED6-5BA1-416D-B454-7C2348BBFEE6} = {CEDB3D86-086A-4B01-BE48-6B16D9B1EE80}
+		{E718BBE9-5F55-4A1E-9CA5-A3297EE6EED0} = {FF71569C-17EC-4C98-A09D-323630E51A64}
+		{F88A0675-43C5-441C-A225-D0F6438C8CA7} = {FF71569C-17EC-4C98-A09D-323630E51A64}
+		{08D9594C-839F-461C-83B5-FE2022FBA0DE} = {14AB28B8-ECE8-4BE6-8872-6838894F9EF8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25A9FD27-993B-4D2C-8921-E14C747E6B05}
