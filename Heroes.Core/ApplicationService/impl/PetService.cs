@@ -14,7 +14,7 @@ namespace Heroes.Core.ApplicationService.impl
         {
             _petRepository = petRepo;
         }
-        public Pet CreateCover(Pet createdPet)
+        public Pet CreatePet(Pet createdPet)
         {
             return _petRepository.CreateCover(createdPet);
         }
@@ -26,7 +26,7 @@ namespace Heroes.Core.ApplicationService.impl
             return _petRepository.DeletePet(id);
         }
 
-        public List<Pet> GetAllCovers()
+        public List<Pet> GetAllPets()
         {
             return _petRepository.GetAllPet();
         }

@@ -5,13 +5,13 @@ namespace Heroes.Core.ApplicationService
 {
     public interface IPetService
     {
-        Pet CreateCover(Pet createdPet);
+        Pet CreatePet(Pet createdPet);
 
         Pet GetPetById(int id);
 
         Pet DeletePet(int id);
 
-        List<Pet> GetAllCovers();
+        List<Pet> GetAllPets();
 
         Pet UpdatePet(Pet updatedPet);
     }
