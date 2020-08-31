@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Heroes.Entity
 {
-    class Pet
+     public class Pet
     {
         public int Id { get; set; }
         public string Name { get; set; }
