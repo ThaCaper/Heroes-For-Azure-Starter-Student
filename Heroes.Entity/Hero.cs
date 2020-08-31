@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Heroes.Entity
 {
-    class Hero
+   public class Hero
     {
         public int Id { get; set; }
         public string Name { get; set; }
