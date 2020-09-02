@@ -65,7 +65,7 @@ namespace Heroes.AzureForStudent.API.Controllers
         [HttpDelete("{id}")]
         public ActionResult<Pet> Delete(int id)
         {
-            var pet = _petService.GetPetById(id);
+            var pet = _petService.DeletePet(id);
             if (pet == null)
             {
                 return StatusCode(404, "Did not find any pet with id " + id);
