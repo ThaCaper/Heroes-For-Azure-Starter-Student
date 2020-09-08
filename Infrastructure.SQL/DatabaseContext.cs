@@ -14,11 +14,10 @@ namespace Infrastructure.SQL
         {
             base.OnModelCreating(modelBuilder);
 
-
-            modelBuilder.Entity<Hero>()
-                .HasMany(h => h.Pets)
-                .WithOne(p => p.Hero)
-                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<Pet>()
+                .HasOne(p => p.Hero)
+                .WithMany(h => h.Pets)
+                .OnDelete(DeleteBehavior.SetNull);
         }
 
         public DbSet<Pet> Pets { get; set; }

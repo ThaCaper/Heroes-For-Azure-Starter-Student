@@ -31,9 +31,9 @@ namespace Infrastructure.SQL.Repositories
 
         public Pet DeletePet(int id)
         {
-            var coverToRemove = _context.Remove(new Pet { Id = id }).Entity;
+            var petToRemove = _context.Remove(new Pet { Id = id }).Entity;
             _context.SaveChanges();
-            return coverToRemove;
+            return petToRemove;
         }
 
         public List<Pet> GetAllPet()

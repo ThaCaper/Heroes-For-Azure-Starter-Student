@@ -2,7 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>ef63a020-cef9-43d5-bbf8-11ec45c947a8</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.7" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure.SQL\Infrastructure.SQL.csproj" />
