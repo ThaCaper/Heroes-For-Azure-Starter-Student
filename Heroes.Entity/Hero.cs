@@ -6,8 +6,8 @@ namespace Heroes.Entity
 {
    public class Hero
     {
-        public int Id { get; set; }
+        public int HeroId { get; set; }
         public string Name { get; set; }
-        public List<Pet> pets { get; set; }
+        public List<Pet> Pets { get; set; }
     }
 }

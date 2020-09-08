@@ -24,12 +24,12 @@ namespace Infrastructure.SQL.Repositories
 
         public List<Hero> GetAllHeroes()
         {
-            return _dbContext.Heroes.ToList();
+            return _dbContext.Heroes.AsNoTracking().ToList();
         }
 
         public Hero GetHeroById(int id)
         {
-            return _dbContext.Heroes.FirstOrDefault(h => h.Id == id);
+            return _dbContext.Heroes.AsNoTracking().FirstOrDefault(h => h.HeroId == id);
         }
 
         public Hero UpdateHero(Hero updatedHero)
@@ -42,7 +42,7 @@ namespace Infrastructure.SQL.Repositories
 
         public Hero DeleteHero(int id)
         {
-            var heroToDelete = _dbContext.Remove(new Hero {Id = id}).Entity;
+            var heroToDelete = _dbContext.Remove(new Hero {HeroId = id}).Entity;
             _dbContext.SaveChanges();
             return heroToDelete;
         }

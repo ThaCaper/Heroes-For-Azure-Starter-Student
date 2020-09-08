@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using Heroes.Core.DomainService;
 using Heroes.Entity;
 
@@ -15,11 +16,16 @@ namespace Heroes.Core.ApplicationService.impl
 
         public Hero CreateHero(Hero createdHero)
         {
+            if(string.IsNullOrEmpty(createdHero.Name))
+                throw new InvalidDataException("Hero must have a Name");
+
             return _heroRepository.CreateHero(createdHero);
         }
 
         public Hero GetHeroById(int id)
         {
+            if (_heroRepository.GetHeroById(id) == null)
+                throw new InvalidDataException("Can't find Hero with the id: " + id);
             return _heroRepository.GetHeroById(id);
         }
 
@@ -35,6 +41,8 @@ namespace Heroes.Core.ApplicationService.impl
 
         public Hero DeleteHero(int id)
         {
+            if (_heroRepository.DeleteHero(id) == null)
+                throw new InvalidDataException("Can't delete Hero with the id: " + id);
             return _heroRepository.DeleteHero(id);
         }
     }

@@ -18,9 +18,15 @@ namespace Infrastructure.SQL.Repositories
 
         public Pet CreatePet(Pet createdPet)
         {
-            _context.Attach(createdPet).State = EntityState.Added;
+            if (createdPet.Hero != null)
+            {
+                _context.Attach(createdPet.Hero).State = EntityState.Unchanged;
+            }
+
+            var savedPet = _context.Add(createdPet).Entity;
+            createdPet.Hero.Pets.Add(savedPet);
             _context.SaveChanges();
-            return createdPet;
+            return savedPet;
         }
 
         public Pet DeletePet(int id)
@@ -32,12 +38,12 @@ namespace Infrastructure.SQL.Repositories
 
         public List<Pet> GetAllPet()
         {
-            return _context.Pets.ToList();
+            return _context.Pets.AsNoTracking().ToList();
         }
 
         public Pet GetPetById(int id)
         {
-            return _context.Pets.FirstOrDefault(c => c.Id == id);
+            return _context.Pets.AsNoTracking().FirstOrDefault(c => c.Id == id);
         }
 
         public Pet UpdatePet(Pet updatedPet)

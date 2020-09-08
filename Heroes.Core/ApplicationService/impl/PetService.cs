@@ -9,13 +9,24 @@ namespace Heroes.Core.ApplicationService.impl
     {
 
         private readonly IPetRepository _petRepository;
+        private readonly IHeroRepository _heroRepository;
 
-        public PetService(IPetRepository petRepo)
+        public PetService(IPetRepository petRepo, IHeroRepository heroRepository)
         {
             _petRepository = petRepo;
+            _heroRepository = heroRepository;
         }
         public Pet CreatePet(Pet createdPet)
         {
+            if(string.IsNullOrEmpty(createdPet.Name))
+                throw new InvalidDataException("Pet must have a Name");
+
+            if(string.IsNullOrEmpty(createdPet.Race))
+                throw new InvalidDataException("Pet must have a Race");
+
+            if(_heroRepository.GetHeroById(createdPet.Hero.HeroId) == null)
+                throw new InvalidDataException("Can't find Hero with the chosen Id");
+
             return _petRepository.CreatePet(createdPet);
         }
 
